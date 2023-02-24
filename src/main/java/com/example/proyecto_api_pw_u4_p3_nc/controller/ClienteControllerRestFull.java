@@ -27,7 +27,7 @@ public class ClienteControllerRestFull {
     @GetMapping(path = "/cedula/{cedula}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Cliente> buscarClientePorCedula(@PathVariable("cedula") String cedula) {
         // TODO Auto-generated method stub
-        return ResponseEntity.status(HttpStatus.OK).body(this.clienteService.buscarClientePorCedula("0000000001"));
+        return ResponseEntity.status(HttpStatus.OK).body(this.clienteService.buscarClientePorCedula(cedula));
     }
 
     @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
